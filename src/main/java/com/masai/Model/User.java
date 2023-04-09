@@ -1,5 +1,6 @@
 package com.masai.Model;
 
+import java.time.Instant;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
@@ -30,8 +31,7 @@ public class User {
 	@Size(min = 0,max = 200,message = "characters shouldn't be more than 200.")
 	private String bio;
 	
-	
-//	private LocalDate created_at;
-//	private LocalDate updated_at;
+//	private Instant created_at;
+//	private Instant updated_at;
 		
 }

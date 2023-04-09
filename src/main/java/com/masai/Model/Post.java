@@ -1,5 +1,6 @@
 package com.masai.Model;
 
+import java.time.Instant;
 import java.time.LocalDate;
 
 import javax.persistence.CascadeType;
@@ -9,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.Size;
 
@@ -22,16 +24,16 @@ public class Post {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int pid;
 	
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "user_post",joinColumns = @JoinColumn(referencedColumnName = "pid"))
-	private int user_id;
+	@ManyToOne(cascade = CascadeType.ALL)
+	  @JoinColumn(name = "user_id")
+	private User user;
 	
 	@Size(min = 1,max = 300,message = "character should be less than 300.")
 	private String content;
 	
-	private LocalDate created_at;
-	private LocalDate updated_at;
-	
-	
-	private int like;
+//	private Instant created_at;
+//	private Instant updated_at;
+//	
+//	
+//	private int like;
 }
