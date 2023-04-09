@@ -9,7 +9,7 @@ public interface UserService {
 
 	public User addUser(User user)throws UserException;
 	public User getUserById(Integer user_id)throws UserException;
-	public User updateUserById(Integer user_id)throws UserException;
+	public User updateUserById(Integer user_id, User user)throws UserException;
 	public User deleteUser(Integer user_id)throws UserException;
 	public List<User> getAllUser()throws UserException;
 	

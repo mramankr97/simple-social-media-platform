@@ -23,7 +23,7 @@ public class Post {
 	private int pid;
 	
 	@OneToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "user_post",joinColumns = @JoinColumn(name="user_id",referencedColumnName = "pid"))
+	@JoinTable(name = "user_post",joinColumns = @JoinColumn(referencedColumnName = "pid"))
 	private int user_id;
 	
 	@Size(min = 1,max = 300,message = "character should be less than 300.")

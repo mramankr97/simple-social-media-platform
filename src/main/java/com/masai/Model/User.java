@@ -31,7 +31,7 @@ public class User {
 	private String bio;
 	
 	
-	private LocalDate created_at;
-	private LocalDate updated_at;
+//	private LocalDate created_at;
+//	private LocalDate updated_at;
 		
 }
