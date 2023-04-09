@@ -31,9 +31,7 @@ public class Post {
 	@Size(min = 1,max = 300,message = "character should be less than 300.")
 	private String content;
 	
-//	private Instant created_at;
-//	private Instant updated_at;
-//	
-//	
-//	private int like;
+	private Instant created_at;
+	private Instant updated_at;
+	private int like;
 }
