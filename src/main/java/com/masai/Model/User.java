@@ -31,7 +31,7 @@ public class User {
 	@Size(min = 0,max = 200,message = "characters shouldn't be more than 200.")
 	private String bio;
 	
-//	private Instant created_at;
-//	private Instant updated_at;
+	private Instant created_at;
+	private Instant updated_at;
 		
 }
